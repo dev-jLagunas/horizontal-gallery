@@ -1,0 +1,52 @@
+/**********************************************
+Panel Intro - Styles
+**********************************************/
+.panel-intro {
+  height: 100vh;
+  @include flex-center-column;
+
+  .panel-intro-wrapper {
+    @include flex-center-column;
+    text-align: center;
+  }
+
+  .panel-intro-title {
+    @include title-style;
+  }
+
+  .panel-intro-img-wrapper {
+    width: 260px;
+  }
+
+  .panel-intro-img {
+    @include full-cover;
+  }
+
+  .panel-intro-text-wrapper {
+    font-family: $font-text;
+    font-size: $font-size-sm;
+    padding-inline: $spacing-xs;
+    margin-top: $spacing-sm;
+    color: $color-dark-light;
+  }
+
+  @media screen and (min-width: 768px) {
+    .panel-intro-title {
+      margin-top: $spacing-lg;
+      font-size: 7rem;
+    }
+
+    .panel-intro-img-wrapper {
+      width: 500px;
+    }
+
+    .panel-intro-subtitle {
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-sm;
+    }
+
+    .panel-intro-caption {
+      font-size: $font-size-reg;
+    }
+  }
+}

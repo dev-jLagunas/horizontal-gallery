@@ -1,2 +1,17 @@
 @import "./variables.scss";
 @import "./config-styles.scss";
+@import "./panel-intro.scss";
+@import "./progress-bar.scss";
+
+/************************************************
+Project Styles
+************************************************/
+.fixed-title {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-family: $font-text;
+  letter-spacing: 2px;
+  z-index: 100;
+  font-size: $font-size-sm;
+}

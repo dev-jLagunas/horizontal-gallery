@@ -3,8 +3,8 @@ Variables
 *********************************************************/
 
 // Fonts
-$font-titles: "Abril Fatface", cursive;
-$font-text: "Open Sans", sans-serif;
+$font-titles: "Oswald";
+$font-text: "Cabin";
 
 // Colors
 $color-light: #eef7ff;
@@ -22,6 +22,29 @@ $spacing-xl: 4rem;
 $letter-spacing: 3px;
 
 // Font Sizes
+$font-size-sm: 1rem;
 $font-size-reg: 1.5rem;
 $font-size-lg: 2rem;
-$font-size-title: 5rem;
+$font-size-title: 4rem;
+
+// Mixins
+@mixin flex-center-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin title-style {
+  font-size: $font-size-title;
+  font-family: $font-titles;
+  letter-spacing: $letter-spacing;
+  color: transparent;
+  -webkit-text-stroke: 1px $color-dark-bold;
+}
+
+@mixin full-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -7,16 +7,60 @@
     <!-- Title -->
     <title>Horizontal Scroll Gallery</title>
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="styles/main.scss" />
   </head>
   <body>
+    <p class="fixed-title">GALLERY - SCROLL DOWN</p>
+    <progress max="100" value="0"></progress>
+    <!-- Intro Panel -->
+    <section class="panel-intro">
+      <div class="panel-intro-wrapper">
+        <h2 class="panel-intro-title">My Gallery</h2>
+        <figure class="panel-intro-img-wrapper">
+          <img
+            src="panel-intro/cat-photographer.png"
+            alt="cat taking a picture drawing"
+            class="panel-intro-img"
+          />
+          <div class="flash-animation-wrapper">
+            <img src="svgs/line-svgrepo.svg" alt="" class="flash-svg line-one" />
+            <img src="svgs/flash-svgrepo.svg" alt="" class="flash-svg" />
+            <img src="svgs/line-svgrepo.svg" alt="" class="flash-svg" />
+            <img src="svgs/flash-svgrepo.svg" alt="" class="flash-svg" />
+            <img src="svgs/line-svgrepo.svg" alt="" class="flash-svg" />
+            <img
+              src="svgs/flash-svgrepo.svg"
+              alt=""
+              class="flash-svg flash-one"
+            />
+          </div>
+        </figure>
+        <div class="panel-intro-text-wrapper">
+          <h3 class="panel-intro-subtitle">I ENJOY TAKING PICTURES</h3>
+          <p class="panel-intro-caption">
+            SNAPSHOTS OF MY LIFE. THANKS FOR STOPPING BY!
+          </p>
+        </div>
+      </section>
+      <!-- Horizontal Scroll Begin -->
+      <div class="scroll-container">
+        <!-- Panels - Panel One -->
+        <section class="panel panel-one">
+          <figure class="panel-one-img-wrapper">
+            <img
+              src="panel-one/fall-landscape.jpg"
+              alt=""
+              class="panel-one-img"
+            />
+            <figcaption class="panel-one-img-caption">AUTUMN VIEWS</figcaption>
+          </figure>
+      </div>
+    </section>
+    <!-- Javascript -->
     <script type="module" src="/main.js"></script>
   </body>
 </html>

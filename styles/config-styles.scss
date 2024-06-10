@@ -22,7 +22,7 @@ body {
 body {
   overflow-y: visible;
   -webkit-overflow-scrolling: touch;
-  background-color: white;
+  background-color: $color-light;
 }
 
 .panel {
@@ -43,7 +43,6 @@ Mandatory Horizontal Scroll Styles - 1024px
     overflow-y: visible;
     position: relative;
     height: unset;
-    background-color: var(--bg-color);
     width: 100%;
   }
 
