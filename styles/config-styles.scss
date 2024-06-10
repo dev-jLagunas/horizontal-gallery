@@ -1,0 +1,66 @@
+/**********************************************
+CSS Reset
+**********************************************/
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/**********************************************
+Basic Vertical Scroll Styles 
+**********************************************/
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+body {
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+  background-color: white;
+}
+
+.panel {
+  height: max-content;
+}
+
+/**********************************************
+Mandatory Horizontal Scroll Styles - 1024px
+**********************************************/
+@media screen and (min-width: 1024px) {
+  html {
+    overflow-y: scroll;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body {
+    overflow-y: visible;
+    position: relative;
+    height: unset;
+    background-color: var(--bg-color);
+    width: 100%;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+    margin: 0;
+  }
+  .scroll-container {
+    width: 1000%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .panel {
+    width: 100vw;
+    height: 100vh;
+  }
+}
