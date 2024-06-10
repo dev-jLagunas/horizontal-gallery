@@ -38,9 +38,23 @@ $font-size-title: 4rem;
 @mixin title-style {
   font-size: $font-size-title;
   font-family: $font-titles;
-  letter-spacing: $letter-spacing;
   color: transparent;
   -webkit-text-stroke: 1px $color-dark-bold;
+}
+
+@mixin img-title-style {
+  font-size: 6rem;
+  font-family: $font-titles;
+  color: $color-light;
+  font-weight: bold;
+  line-height: 1;
+}
+
+@mixin center-positioned {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @mixin full-cover {

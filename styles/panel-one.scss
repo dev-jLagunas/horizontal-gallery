@@ -1,0 +1,38 @@
+/**********************************************
+Panel One - Styles
+**********************************************/
+.panel-one {
+  .panel-one-img-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    .panel-one-img {
+      @include full-cover;
+    }
+
+    .panel-one-img-caption {
+      @include center-positioned;
+      @include img-title-style;
+      text-align: center;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .panel-one-img-wrapper {
+      .panel-one-img {
+        width: 200%;
+        height: 200%;
+        object-fit: cover;
+      }
+
+      .panel-one-img-caption {
+        opacity: 0;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

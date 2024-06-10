@@ -19,8 +19,11 @@ export function horizontalScroll() {
 
   function destroyScrollTrigger() {
     if (scrollTween) {
-      scrollTween.scrollTrigger.kill();
+      if (scrollTween.scrollTrigger) {
+        scrollTween.scrollTrigger.kill();
+      }
       scrollTween.kill();
+      scrollTween = null;
     }
   }
 
