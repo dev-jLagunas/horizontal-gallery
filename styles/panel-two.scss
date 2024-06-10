@@ -1,0 +1,54 @@
+/**********************************************
+Panel Two - Styles
+**********************************************/
+.panel-two {
+  height: max-content;
+  margin-top: $spacing-lg;
+
+  .panel-two-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-inline: $spacing-xs;
+    max-width: 600px;
+    margin-inline: auto;
+  }
+
+  .panel-two-img-wrapper {
+    height: 100%;
+
+    .panel-two-img {
+      @include full-cover;
+    }
+
+    .panel-two-img-caption {
+      font-family: $font-titles;
+      font-size: $font-size-sm;
+      color: $color-dark-bold;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  .panel-two-wrapper-3,
+  .panel-two-wrapper-4 {
+    margin-top: $spacing-lg;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .panel-two {
+    height: 100vh;
+    width: 100vw;
+    @include flex-center;
+
+    .panel-two-wrapper {
+      @include flex-center;
+    }
+
+    .panel-two-wrapper-3,
+    .panel-two-wrapper-4 {
+      margin-top: 0;
+    }
+  }
+}

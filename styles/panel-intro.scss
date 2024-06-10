@@ -33,11 +33,12 @@ Panel Intro - Styles
   @media screen and (min-width: 768px) {
     .panel-intro-title {
       margin-top: $spacing-lg;
-      font-size: 7rem;
+      font-size: 6rem;
     }
 
     .panel-intro-img-wrapper {
-      width: 500px;
+      width: 400px;
+      margin-top: -6rem;
     }
 
     .panel-intro-subtitle {
