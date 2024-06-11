@@ -1,0 +1,63 @@
+/**********************************************
+Panel Six - Styles
+**********************************************/
+.panel-six {
+  margin-top: 12rem;
+  padding-inline: $spacing-xs;
+
+  .panel-six-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .panel-six-img-wrapper {
+      width: 310px;
+
+      .panel-six-img {
+        @include full-cover;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .panel-six {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+
+    .panel-six-wrapper {
+      flex-direction: row;
+      height: 50vh;
+      width: 70%;
+      .panel-six-img-wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+
+      .panel-six-img {
+        @include full-cover;
+      }
+    }
+
+    .active {
+      animation: slide-in-top 1s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+    }
+    @keyframes slide-in-top {
+      0% {
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -11,7 +11,7 @@ export function animatePanelFive(scrollTween) {
       start: "top 70%",
       end: "center 30%",
       scrub: 1,
-      markers: true,
+      markers: false,
       horizontal: true,
     },
   });
@@ -20,4 +20,29 @@ export function animatePanelFive(scrollTween) {
     width: "100%",
     duration: 3,
   });
+
+  const tlPanelFiveTitle = gsap.timeline({
+    scrollTrigger: {
+      containerAnimation: scrollTween,
+      trigger: ".panel-five-title",
+      start: "left 80%",
+      end: "center 60%",
+      scrub: 1,
+      markers: false,
+      horizontal: true,
+    },
+  });
+
+  tlPanelFiveTitle
+    .to(".panel-five-title", {
+      scale: 2,
+      color: "pink",
+      y: 200,
+
+      duration: 2,
+    })
+    .to(".panel-five-title", {
+      x: 300,
+      duration: 2,
+    });
 }

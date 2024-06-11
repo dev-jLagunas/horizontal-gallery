@@ -18,11 +18,10 @@ Panel Five - Styles
   }
 
   .panel-five-title {
-    @include img-title-style;
-    color: $color-dark-light;
-    @include center-positioned;
+    @include title-style;
     text-align: center;
-    font-size: 4rem;
+    line-height: 1;
+    margin-top: $spacing-lg;
   }
 }
 
@@ -31,7 +30,6 @@ Panel Five - Styles
     margin-top: 0;
 
     .panel-five-wrapper {
-      overflow: hidden;
       .panel-five-img-wrapper {
         width: 200%;
       }
@@ -39,6 +37,12 @@ Panel Five - Styles
   }
 
   .panel-five-title {
-    display: none;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    @include title-style;
+    font-size: 8rem;
   }
 }
