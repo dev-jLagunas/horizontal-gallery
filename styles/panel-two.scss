@@ -10,7 +10,7 @@ Panel Two - Styles
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding-inline: $spacing-xs;
-    max-width: 600px;
+    max-width: 400px;
     margin-inline: auto;
   }
 
@@ -40,15 +40,53 @@ Panel Two - Styles
   .panel-two {
     height: 100vh;
     width: 100vw;
-    @include flex-center;
+    position: relative;
 
     .panel-two-wrapper {
-      @include flex-center;
+      position: absolute;
+      left: 200px;
+      top: 120px;
     }
 
+    .panel-two-img-wrapper {
+      .panel-two-img-caption {
+        opacity: 0;
+        position: absolute;
+      }
+
+      .caption-active {
+        font-size: $font-size-reg;
+        @include center-positioned;
+        color: $color-light;
+        font-weight: bold;
+        opacity: 1;
+        animation: text-focus-in 2s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+
+        @keyframes text-focus-in {
+          0% {
+            -webkit-filter: blur(12px);
+            filter: blur(12px);
+            opacity: 0;
+          }
+          100% {
+            -webkit-filter: blur(0px);
+            filter: blur(0px);
+            opacity: 1;
+          }
+        }
+      }
+    }
     .panel-two-wrapper-3,
     .panel-two-wrapper-4 {
       margin-top: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .panel-two {
+    .panel-two-wrapper {
+      top: 200px;
     }
   }
 }
