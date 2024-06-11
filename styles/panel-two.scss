@@ -2,8 +2,9 @@
 Panel Two - Styles
 **********************************************/
 .panel-two {
-  height: max-content;
   margin-top: $spacing-lg;
+  position: relative;
+  height: max-content;
 
   .panel-two-wrapper {
     display: grid;
@@ -22,17 +23,20 @@ Panel Two - Styles
     }
 
     .panel-two-img-caption {
-      font-family: $font-titles;
-      font-size: $font-size-sm;
-      color: $color-dark-bold;
-      text-align: center;
-      text-transform: uppercase;
+      @include text-style;
     }
   }
 
   .panel-two-wrapper-3,
   .panel-two-wrapper-4 {
     margin-top: $spacing-lg;
+  }
+
+  .panel-two-transition-title {
+    @include title-style;
+    text-align: center;
+    grid-column: span 2;
+    margin-top: 5rem;
   }
 }
 
@@ -79,6 +83,14 @@ Panel Two - Styles
     .panel-two-wrapper-3,
     .panel-two-wrapper-4 {
       margin-top: 0;
+    }
+
+    .panel-two-transition-title {
+      @include center-positioned;
+      font-size: 5rem;
+      width: 600px;
+      z-index: -1;
+      opacity: 0;
     }
   }
 }

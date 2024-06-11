@@ -50,6 +50,14 @@ $font-size-title: 4rem;
   line-height: 1;
 }
 
+@mixin text-style {
+  font-family: $font-titles;
+  font-size: $font-size-sm;
+  color: $color-dark-bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 @mixin center-positioned {
   position: absolute;
   top: 50%;

@@ -1,0 +1,74 @@
+/**********************************************
+Panel Three - Styles
+**********************************************/
+.panel-three {
+  height: max-content;
+
+  .panel-three-wrapper {
+    .panel-three-img-wrapper {
+      width: 300px;
+      margin-inline: auto;
+      .panel-three-img {
+        @include full-cover;
+      }
+    }
+  }
+
+  .panel-three-subtitle {
+    @include text-style;
+    font-size: $font-size-reg;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .panel-three {
+    margin-top: $spacing-lg;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .panel-three {
+    position: relative;
+    height: 90vh;
+
+    .panel-three-wrapper {
+      position: relative;
+
+      .panel-three-img-wrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 250px;
+
+        .panel-three-img {
+          @include full-cover;
+        }
+      }
+    }
+
+    .panel-three-subtitle {
+      position: absolute;
+      bottom: 0;
+      left: -5%;
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .panel-three {
+    .panel-three-wrapper {
+      .panel-three-img-wrapper {
+        left: 0;
+      }
+
+      .panel-three-wrapper-1 {
+        width: 300px;
+      }
+    }
+
+    .panel-three-subtitle {
+      left: -30%;
+    }
+  }
+}

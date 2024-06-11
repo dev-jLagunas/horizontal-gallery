@@ -89,9 +89,9 @@ export function animatePanelTwo(scrollTween) {
       containerAnimation: scrollTween,
       trigger: ".panel-two",
       horizontal: true,
-      markers: true,
+      markers: false,
       start: "center right",
-      end: "right center",
+      end: "right left",
       toggleActions: "play none none reverse",
       toggleClass: {
         targets: ".panel-two-img-caption",
@@ -99,5 +99,22 @@ export function animatePanelTwo(scrollTween) {
       },
       scrub: 1,
     },
+  });
+
+  gsap.to(".panel-two-wrapper", {
+    scrollTrigger: {
+      containerAnimation: scrollTween,
+      trigger: ".panel-two-wrapper",
+      horizontal: true,
+      markers: false,
+      start: "right 60%",
+      end: "right left",
+      toggleActions: "play none none reverse",
+      scrub: 1,
+    },
+
+    x: 500,
+    scale: 1.2,
+    duration: 2,
   });
 }
