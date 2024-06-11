@@ -1,0 +1,106 @@
+/**********************************************
+Panel Five - Styles
+**********************************************/
+.panel-seven {
+  height: 100vh;
+  @include flex-center;
+  flex-direction: column;
+  position: relative;
+
+  .panel-seven-title {
+    @include title-style;
+    text-align: center;
+    line-height: 1;
+    margin-top: $spacing-lg;
+  }
+
+  .panel-seven-img {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .panel-seven {
+    .panel-seven-title {
+      font-size: 8rem;
+    }
+
+    .wobble {
+      animation: wobble-ver-left 3s ease-out infinite both;
+    }
+
+    @keyframes wobble-ver-left {
+      0%,
+      100% {
+        -webkit-transform: translateY(0) rotate(0);
+        transform: translateY(0) rotate(0);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+      }
+      15% {
+        -webkit-transform: translateY(-30px) rotate(-6deg);
+        transform: translateY(-30px) rotate(-6deg);
+      }
+      30% {
+        -webkit-transform: translateY(15px) rotate(6deg);
+        transform: translateY(15px) rotate(6deg);
+      }
+      45% {
+        -webkit-transform: translateY(-15px) rotate(-3.6deg);
+        transform: translateY(-15px) rotate(-3.6deg);
+      }
+      60% {
+        -webkit-transform: translateY(9px) rotate(2.4deg);
+        transform: translateY(9px) rotate(2.4deg);
+      }
+      75% {
+        -webkit-transform: translateY(-6px) rotate(-1.2deg);
+        transform: translateY(-6px) rotate(-1.2deg);
+      }
+    }
+
+    .jello {
+      animation: jello-vertical 1s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+    }
+
+    @keyframes jello-vertical {
+      0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+      30% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+      }
+      40% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+      }
+      50% {
+        -webkit-transform: scale3d(0.85, 1.15, 1);
+        transform: scale3d(0.85, 1.15, 1);
+      }
+      65% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+      }
+      75% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+      }
+      100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .panel-seven {
+    .panel-seven-img {
+      left: 10%;
+      top: 30%;
+    }
+  }
+}

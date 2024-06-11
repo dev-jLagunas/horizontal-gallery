@@ -4,6 +4,7 @@ Panel Six - Styles
 .panel-six {
   margin-top: 12rem;
   padding-inline: $spacing-xs;
+  height: max-content;
 
   .panel-six-wrapper {
     display: flex;
