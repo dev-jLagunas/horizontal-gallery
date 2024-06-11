@@ -16,7 +16,6 @@ export function animatePanelTwo(scrollTween) {
       scrub: 1,
     },
   });
-
   tlPanelTwoImgOne.to(".panel-two-wrapper-1", {
     x: -30,
     y: -100,
@@ -36,14 +35,12 @@ export function animatePanelTwo(scrollTween) {
       scrub: 1,
     },
   });
-
   tlPanelTwoImgTwo.to(".panel-two-wrapper-2", {
     x: 35,
     y: -100,
     scale: 1.4,
     duration: 1,
   });
-
   const tlPanelTwoImgThree = gsap.timeline({
     scrollTrigger: {
       containerAnimation: scrollTween,
@@ -56,14 +53,12 @@ export function animatePanelTwo(scrollTween) {
       scrub: 1,
     },
   });
-
   tlPanelTwoImgThree.to(".panel-two-wrapper-3", {
     x: -30,
     y: 10,
     scale: 1.4,
     duration: 1,
   });
-
   const tlPanelTwoImgFour = gsap.timeline({
     scrollTrigger: {
       containerAnimation: scrollTween,
@@ -76,14 +71,12 @@ export function animatePanelTwo(scrollTween) {
       scrub: 1,
     },
   });
-
   tlPanelTwoImgFour.to(".panel-two-wrapper-4", {
     x: 35,
     y: 10,
     scale: 1.4,
     duration: 1,
   });
-
   gsap.to(".panel-two-img-caption", {
     scrollTrigger: {
       containerAnimation: scrollTween,
@@ -99,22 +92,5 @@ export function animatePanelTwo(scrollTween) {
       },
       scrub: 1,
     },
-  });
-
-  gsap.to(".panel-two-wrapper", {
-    scrollTrigger: {
-      containerAnimation: scrollTween,
-      trigger: ".panel-two-wrapper",
-      horizontal: true,
-      markers: false,
-      start: "right 60%",
-      end: "right left",
-      toggleActions: "play none none reverse",
-      scrub: 1,
-    },
-
-    x: 500,
-    scale: 1.2,
-    duration: 2,
   });
 }

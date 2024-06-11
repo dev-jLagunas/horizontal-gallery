@@ -8,32 +8,29 @@ export function animatePanelThree(scrollTween) {
     scrollTrigger: {
       containerAnimation: scrollTween,
       horizontal: true,
-      trigger: ".panel-two-transition-title",
+      trigger: ".panel-three",
       toggleActions: "play none none reverse",
-      start: "right rigth",
-      end: "left left",
+      start: "left right",
+      end: "center 65%",
       markers: false,
-      start: "center 75%",
-      end: "right left",
       scrub: 1,
     },
   });
 
   panelTransitionTitle
-    .to(".panel-two-transition-title", {
-      x: 500,
-      opacity: 1,
-      duration: 2,
+    .to(".panel-three-title", {
+      yPercent: 500,
+      duration: 1,
     })
-    .to(".panel-two-transition-title", {
+    .to(".panel-three-title", {
+      xPercent: 70,
       rotate: 90,
-      y: -100,
-      scale: 1.5,
-      duration: 2,
+      scale: 1.8,
+      duration: 1,
     })
-    .to(".panel-two-transition-title", {
+    .to(".panel-three-title", {
       color: "black",
-      duration: 2,
+      duration: 1,
     });
 
   const tlPanelThreeImgOne = gsap.timeline({
@@ -51,7 +48,7 @@ export function animatePanelThree(scrollTween) {
 
   tlPanelThreeImgOne.to(".panel-three-wrapper-1", {
     y: 400,
-    x: -200,
+    x: -150,
     duration: 2,
   });
 
@@ -69,8 +66,8 @@ export function animatePanelThree(scrollTween) {
   });
 
   tlPanelThreeImgTwo.to(".panel-three-wrapper-2", {
-    y: -10,
-    x: -200,
+    y: 10,
+    x: -170,
     duration: 2,
   });
 
@@ -89,8 +86,8 @@ export function animatePanelThree(scrollTween) {
 
   tlPanelThreeImgThree
     .to(".panel-three-wrapper-3", {
-      x: 200,
-      y: 10,
+      x: 300,
+      y: 50,
       duration: 2,
     })
     .to(".panel-three-wrapper-3", {
@@ -112,8 +109,8 @@ export function animatePanelThree(scrollTween) {
   });
 
   tlPanelThreeImgFour.to(".panel-three-wrapper-4", {
-    y: 410,
-    x: 200,
+    y: 420,
+    x: 300,
     duration: 2,
   });
 
@@ -133,16 +130,16 @@ export function animatePanelThree(scrollTween) {
   tlPanelThreeSubtitle
     .to(".panel-three-subtitle", {
       x: 600,
+      duration: 1,
+    })
+    .to(".panel-three-subtitle", {
+      color: "#C40C0C",
       duration: 2,
     })
     .to(".panel-three-subtitle", {
       y: -400,
       scale: 2,
       rotate: -15,
-      duration: 2,
-    })
-    .to(".panel-three-subtitle", {
-      color: "#C40C0C",
       duration: 2,
     });
 }

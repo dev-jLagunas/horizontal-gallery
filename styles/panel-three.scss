@@ -3,6 +3,12 @@ Panel Three - Styles
 **********************************************/
 .panel-three {
   height: max-content;
+  margin-top: $spacing-xl;
+
+  .panel-three-title {
+    @include title-style;
+    text-align: center;
+  }
 
   .panel-three-wrapper {
     .panel-three-img-wrapper {
@@ -22,14 +28,24 @@ Panel Three - Styles
 
 @media screen and (min-width: 425px) {
   .panel-three {
-    margin-top: $spacing-lg;
+    margin-top: $spacing-xl;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .panel-three {
     position: relative;
-    height: 90vh;
+    height: 100vh;
+    width: 100vw;
+    margin-top: 0;
+
+    .panel-three-title {
+      width: max-content;
+      position: absolute;
+      left: -20%;
+      top: -20%;
+      margin-top: 5rem;
+    }
 
     .panel-three-wrapper {
       position: relative;
@@ -55,11 +71,17 @@ Panel Three - Styles
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1920px) {
   .panel-three {
+    .panel-three-title {
+      left: -40%;
+      margin-top: 10rem;
+    }
+
     .panel-three-wrapper {
       .panel-three-img-wrapper {
         left: 0;
+        margin-top: $spacing-lg;
       }
 
       .panel-three-wrapper-1 {

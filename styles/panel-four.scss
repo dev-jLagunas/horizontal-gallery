@@ -1,0 +1,61 @@
+/**********************************************
+Panel Four - Styles
+**********************************************/
+.panel-four {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: $spacing-lg;
+
+  .panel-four-cherry-img {
+    width: 200px;
+  }
+
+  .panel-four-title {
+    @include title-style;
+    text-align: center;
+  }
+
+  .panel-four-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+    .panel-four-img-wrapper {
+      width: 100%;
+
+      .panel-four-img {
+        @include full-cover;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .panel-four {
+    position: relative;
+    border: 2px solid orange;
+    height: 100vh;
+    width: 100vw;
+    margin-left: 10rem;
+
+    .panel-four-cherry-img {
+      position: absolute;
+      top: -250px;
+      opacity: 0;
+    }
+
+    .panel-four-wrapper {
+      border: 5px solid green;
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .panel-four {
+    border: 5px solid yellow;
+  }
+}
