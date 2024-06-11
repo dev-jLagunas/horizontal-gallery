@@ -1,0 +1,44 @@
+/**********************************************
+Panel Five - Styles
+**********************************************/
+.panel-five {
+  margin-top: $spacing-lg;
+  position: relative;
+
+  .panel-five-wrapper {
+    .panel-five-img-wrapper {
+      width: 90%;
+      height: 100vh;
+      margin-inline: auto;
+
+      .panel-five-img {
+        @include full-cover;
+      }
+    }
+  }
+
+  .panel-five-title {
+    @include img-title-style;
+    color: $color-dark-light;
+    @include center-positioned;
+    text-align: center;
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .panel-five {
+    margin-top: 0;
+
+    .panel-five-wrapper {
+      overflow: hidden;
+      .panel-five-img-wrapper {
+        width: 200%;
+      }
+    }
+  }
+
+  .panel-five-title {
+    display: none;
+  }
+}

@@ -4,6 +4,7 @@ import { animatePanelOne } from "./panels-animations/panelOneAnimation.js";
 import { animatePanelTwo } from "./panels-animations/panelTwoAnimation.js";
 import { animatePanelThree } from "./panels-animations/panelThreeAnimation.js";
 import { animatePanelFour } from "./panels-animations/panelFourAnimation.js";
+import { animatePanelFive } from "./panels-animations/panelFiveAnimation.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,6 +46,9 @@ export function initializeHorizontalScrollTrigger() {
 
   // Panel Four Animation
   animatePanelFour(scrollTween);
+
+  // Panel Five Animation
+  animatePanelFive(scrollTween);
 
   return scrollTween;
 }

@@ -111,7 +111,7 @@ export function animatePanelFour(scrollTween) {
       containerAnimation: scrollTween,
       trigger: ".panel-four",
       start: "left 70%",
-      end: "center 30%",
+      end: "center 60%",
       scrub: 1,
       markers: false,
       horizontal: true,
@@ -120,8 +120,8 @@ export function animatePanelFour(scrollTween) {
 
   tlPanelFourTitle.to(".panel-four-title", {
     scale: 3,
-    color: "#FB9AD1",
-    duration: 2,
+    color: "#CDE8E5",
+    duration: 1,
   });
 
   const tlPanelFourCherryImg = gsap.timeline({
