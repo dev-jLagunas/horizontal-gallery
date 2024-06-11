@@ -1,0 +1,50 @@
+/**********************************************
+Panel Eight - Styles
+**********************************************/
+.panel-eight {
+  height: max-content;
+
+  .panel-eight-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-xs;
+    width: 90%;
+    margin: 0 auto;
+
+    .panel-eight-img-wrapper {
+      width: 200px;
+
+      .panel-eight-img {
+        @include full-cover;
+      }
+    }
+
+    .panel-eight-wrapper-5 {
+      grid-column: span 2;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .panel-eight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border: 2px solid green;
+
+    .panel-eight-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .panel-eight-img-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}

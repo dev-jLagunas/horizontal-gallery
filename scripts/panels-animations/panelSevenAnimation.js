@@ -7,15 +7,15 @@ export function animatePanelSeven(scrollTween) {
   const panels = gsap.utils.toArray(".panel");
   // Panel Seven Animations
   const fakePin = gsap.to(".panel-seven", {
-    x: window.innerWidth * (panels.length - 6), // Updated to reflect relative position in panel 7
+    x: window.innerWidth * (panels.length - 7), // Updated to reflect relative position in panel 7
     ease: "none",
   });
 
   ScrollTrigger.create({
     trigger: ".panel-seven",
     start: "left left",
-    endTrigger: ".panel-eight",
-    end: () => "+=" + window.innerWidth * (panels.length - 6),
+    // endTrigger: ".panel-eight",
+    end: () => "+=" + window.innerWidth * (panels.length - 7),
     scrub: true,
     containerAnimation: scrollTween,
     animation: fakePin,
@@ -43,7 +43,7 @@ export function animatePanelSeven(scrollTween) {
       start: "top 75%",
       end: "center left",
       scrub: 1,
-      markers: true,
+      markers: false,
       toggleActions: "play none none reverse",
       toggleClass: { targets: ".panel-seven-img", className: "wobble" },
     },
