@@ -36,26 +36,46 @@ Panel Four - Styles
 @media screen and (min-width: 1024px) {
   .panel-four {
     position: relative;
-    border: 2px solid orange;
     height: 100vh;
     width: 100vw;
-    margin-left: 10rem;
+    margin-top: 0;
+    margin-left: 5rem;
 
     .panel-four-cherry-img {
       position: absolute;
-      top: -250px;
-      opacity: 0;
+      top: -25%;
+      z-index: 10;
+    }
+
+    .panel-four-title {
+      @include center-positioned;
     }
 
     .panel-four-wrapper {
-      border: 5px solid green;
-      width: 50%;
+      width: 600px;
     }
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1920px) {
   .panel-four {
-    border: 5px solid yellow;
+    margin-left: -80rem;
+
+    .panel-four-cherry-img {
+      @include center-positioned;
+      left: 38%;
+      top: -3%;
+      opacity: 0;
+    }
+
+    .panel-four-title {
+      left: 38%;
+    }
+
+    .panel-four-wrapper {
+      width: 700px;
+      position: absolute;
+      left: 20%;
+    }
   }
 }

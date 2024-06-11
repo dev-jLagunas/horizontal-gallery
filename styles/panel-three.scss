@@ -73,6 +73,8 @@ Panel Three - Styles
 
 @media screen and (min-width: 1920px) {
   .panel-three {
+    width: 100vw;
+
     .panel-three-title {
       left: -40%;
       margin-top: 10rem;
