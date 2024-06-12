@@ -39,7 +39,7 @@ $font-size-title: 4rem;
   font-size: $font-size-title;
   font-family: $font-titles;
   color: transparent;
-  -webkit-text-stroke: 1px $color-dark-bold;
+  -webkit-text-stroke: 2px $color-dark-bold;
 }
 
 @mixin img-title-style {

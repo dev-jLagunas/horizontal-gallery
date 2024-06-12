@@ -1,0 +1,70 @@
+/*************************************************
+Panel Nine - Styles
+*************************************************/
+.panel-nine {
+  margin-top: $spacing-xl;
+  @include flex-center;
+
+  .panel-nine-wrapper {
+    width: 90%;
+    margin: 0 auto;
+
+    .panel-nine-img-wrapper {
+      height: 100%;
+      width: auto;
+      position: relative;
+      .panel-nine-img {
+        @include full-cover;
+      }
+
+      .panel-nine-img-caption {
+        @include center-positioned;
+        @include img-title-style;
+        top: 70%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .panel-nine {
+    margin-top: 0;
+    margin-left: 10rem;
+
+    .panel-nine-wrapper {
+      width: 100%;
+
+      .panel-nine-img-wrapper {
+        height: 10px;
+
+        .panel-nine-img {
+          object-position: 50% 20%;
+          object-fit: cover;
+        }
+
+        .panel-nine-img-caption {
+          top: 10%;
+          left: 10%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .panel-nine {
+    .panel-nine-wrapper {
+      width: 80%;
+      margin-left: -10rem;
+
+      .panel-nine-img-wrapper {
+        height: 10px;
+
+        .panel-nine-img {
+          object-position: 50% 20%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

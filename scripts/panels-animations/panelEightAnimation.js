@@ -27,18 +27,24 @@ export function animatePanelEight(scrollTween) {
       containerAnimation: scrollTween,
       trigger: ".panel-eight-dog-png",
       start: "left 80%",
-      end: "right center",
+      end: "600px left",
       scrub: 1,
-      markers: true,
+      markers: false,
       toggleActions: "play none none reverse",
     },
   });
 
-  panelEightDogImg.to(".panel-eight-dog-png", {
-    x: 180,
-    scale: 2,
-    duration: 2,
-  });
+  panelEightDogImg
+    .to(".panel-eight-dog-png", {
+      x: 180,
+      scale: 2,
+      duration: 2,
+    })
+    .to(".panel-eight-dog-png", {
+      x: 0,
+      scale: 1,
+      duration: 2,
+    });
 
   const panelEightCatImg = gsap.timeline({
     scrollTrigger: {
