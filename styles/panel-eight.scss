@@ -12,8 +12,6 @@ Panel Eight - Styles
     margin: 0 auto;
 
     .panel-eight-img-wrapper {
-      width: 200px;
-
       .panel-eight-img {
         @include full-cover;
       }
@@ -21,6 +19,12 @@ Panel Eight - Styles
 
     .panel-eight-wrapper-5 {
       grid-column: span 2;
+    }
+
+    .panel-eight-goat-png,
+    .panel-eight-dog-png,
+    .panel-eight-cat-png {
+      display: none;
     }
   }
 }
@@ -31,19 +35,63 @@ Panel Eight - Styles
     justify-content: center;
     align-items: center;
     height: 100vh;
-    border: 2px solid green;
 
     .panel-eight-wrapper {
-      width: 100%;
+      width: 75%;
       display: flex;
       justify-content: center;
       align-items: center;
       position: relative;
 
-      .panel-eight-img-wrapper {
+      .panel-eight-goat-png {
+        display: block;
+        top: 20px;
+        width: 100px;
         position: absolute;
-        top: 0;
-        left: 0;
+        z-index: -10;
+      }
+
+      .panel-eight-dog-png {
+        display: block;
+        bottom: 60px;
+        right: 30px;
+        width: 100px;
+        position: absolute;
+        transform: rotate(90deg);
+        z-index: -10;
+      }
+
+      .panel-eight-cat-png {
+        display: block;
+        left: 20px;
+        bottom: 60px;
+        width: 100px;
+        position: absolute;
+        transform: rotate(-90deg);
+        z-index: -10;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .panel-eight {
+    .panel-eight-wrapper {
+      width: 55%;
+
+      .panel-eight-goat-png {
+        top: -10px;
+      }
+
+      .panel-eight-dog-png {
+        width: 150px;
+        right: -40px;
+      }
+
+      .panel-eight-cat-png {
+        width: 125px;
+        bottom: 90px;
+        left: -10px;
       }
     }
   }

@@ -4,39 +4,57 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export function animatePanelEight(scrollTween) {
-  const panels = gsap.utils.toArray(".panel");
-
-  const fakePin = gsap.to(".panel-eight", {
-    x: window.innerWidth * (panels.length - 8), // Updated to reflect relative position in panel 7
-    ease: "none",
-  });
-
-  ScrollTrigger.create({
-    trigger: ".panel-eight",
-    start: "left left",
-    // endTrigger: ".panel-eight",
-    end: () => "+=" + window.innerWidth * (panels.length - 8),
-    scrub: true,
-    containerAnimation: scrollTween,
-    animation: fakePin,
-  });
-
-  // Panel Eight Animations
-  const tlPanelEightImgOne = gsap.timeline({
-    scrolTrigger: {
+  const panelEightGoatImg = gsap.timeline({
+    scrollTrigger: {
       containerAnimation: scrollTween,
-      horizontal: true,
-      trigger: ".panel-eight-wrapper-1",
-      start: "left center",
-      end: "center center",
+      trigger: ".panel-eight-goat-png",
+      start: "left 80%",
+      end: "right center",
       scrub: 1,
-      markers: { fontSize: "1.5rem" },
+      markers: false,
       toggleActions: "play none none reverse",
     },
   });
 
-  tlPanelEightImgOne.to(".panel-eight-wrapper-1", {
-    y: -400,
-    duration: 1,
+  panelEightGoatImg.to(".panel-eight-goat-png", {
+    y: -120,
+    scale: 3,
+    duration: 2,
+  });
+
+  const panelEightDogImg = gsap.timeline({
+    scrollTrigger: {
+      containerAnimation: scrollTween,
+      trigger: ".panel-eight-dog-png",
+      start: "left 80%",
+      end: "right center",
+      scrub: 1,
+      markers: true,
+      toggleActions: "play none none reverse",
+    },
+  });
+
+  panelEightDogImg.to(".panel-eight-dog-png", {
+    x: 180,
+    scale: 2,
+    duration: 2,
+  });
+
+  const panelEightCatImg = gsap.timeline({
+    scrollTrigger: {
+      containerAnimation: scrollTween,
+      trigger: ".panel-eight-cat-png",
+      start: "left 80%",
+      end: "right 40%",
+      scrub: 1,
+      markers: true,
+      toggleActions: "play none none reverse",
+    },
+  });
+
+  panelEightCatImg.to(".panel-eight-cat-png", {
+    x: -150,
+    scale: 1.7,
+    duration: 2,
   });
 }
