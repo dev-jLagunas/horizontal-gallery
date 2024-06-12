@@ -47,7 +47,7 @@ export function animatePanelEight(scrollTween) {
       start: "left 80%",
       end: "right 40%",
       scrub: 1,
-      markers: true,
+      markers: false,
       toggleActions: "play none none reverse",
     },
   });
