@@ -7,6 +7,7 @@ Panel Outro - Styles
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: $spacing-lg;
 
   .panel-outro-puzzle-wrapper-1 {
     display: grid;
@@ -18,6 +19,8 @@ Panel Outro - Styles
     overflow: hidden;
     margin-inline: auto;
     margin-bottom: $spacing-xs;
+    position: relative;
+
     .panel-outro-img-wrapper:nth-child(1) {
       .panel-outro-img {
         width: 100%;
@@ -218,45 +221,72 @@ Panel Outro - Styles
     height: 300px;
     margin-inline: auto;
     gap: 5px;
-    margin-bottom: 7rem;
 
     .panel-outro-img-wrapper:nth-child(1) {
       overflow: hidden;
+      position: relative;
       .panel-outro-img {
         width: 100%;
         height: 200%;
         object-fit: cover;
         object-position: top left;
       }
+
+      .panel-outro-img-caption {
+        @include img-title-style;
+        font-size: 3rem;
+        @include center-positioned;
+      }
     }
 
     .panel-outro-img-wrapper:nth-child(2) {
       overflow: hidden;
+      position: relative;
       .panel-outro-img {
         width: 100%;
         height: 190%;
         object-fit: cover;
         object-position: top right;
       }
+
+      .panel-outro-img-caption {
+        @include img-title-style;
+        font-size: 3rem;
+        @include center-positioned;
+      }
     }
 
     .panel-outro-img-wrapper:nth-child(3) {
       overflow: hidden;
+      position: relative;
       .panel-outro-img {
         width: 260%;
         height: 100%;
         object-fit: cover;
         object-position: bottom left;
       }
+
+      .panel-outro-img-caption {
+        @include img-title-style;
+        font-size: 3rem;
+        @include center-positioned;
+      }
     }
 
     .panel-outro-img-wrapper:nth-child(4) {
       overflow: hidden;
+      position: relative;
       .panel-outro-img {
         width: 260%;
         height: 110%;
         object-fit: cover;
         object-position: bottom;
+      }
+
+      .panel-outro-img-caption {
+        @include img-title-style;
+        font-size: 3rem;
+        @include center-positioned;
       }
     }
   }
@@ -266,23 +296,28 @@ Panel Outro - Styles
   .panel-outro {
     flex-direction: row;
     flex-wrap: wrap;
-    height: 100vh;
+    height: max-content;
+    margin-bottom: $spacing-lg;
 
     .panel-outro-puzzle-wrapper-5 {
       width: 90%;
       margin-bottom: $spacing-lg;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(1, 1fr);
     }
   }
 }
 
 @media screen and (min-width: 1024px) {
   .panel-outro {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     height: 100vh;
+    overflow: hidden;
 
     .panel-outro-puzzle-wrapper-5 {
-      width: 620px;
-      margin-bottom: $spacing-lg;
+      width: 500px;
+      grid-column: span 4;
 
       .panel-outro-img-wrapper:nth-child(1) {
         overflow: hidden;
@@ -330,7 +365,7 @@ Panel Outro - Styles
 @media screen and (min-width: 1600px) {
   .panel-outro {
     .panel-outro-puzzle-wrapper-5 {
-      width: 800px;
+      width: 400px;
       margin-bottom: 0;
     }
   }
